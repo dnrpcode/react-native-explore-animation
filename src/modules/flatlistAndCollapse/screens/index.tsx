@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, StyleSheet, ViewToken} from 'react-native';
+import {FlatList, ViewToken} from 'react-native';
 import {useSharedValue} from 'react-native-reanimated';
 import {ListItem} from '../components/ListItems';
 
@@ -11,8 +11,6 @@ export default function FlatlistAndCollapseScreen() {
   return (
     <FlatList
       data={data}
-      style={styles.container}
-      contentContainerStyle={styles.content}
       onViewableItemsChanged={({viewableItems: vItems}) => {
         viewableItems.value = vItems;
       }}
@@ -22,13 +20,3 @@ export default function FlatlistAndCollapseScreen() {
     />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  content: {
-    paddingTop: 40,
-  },
-});

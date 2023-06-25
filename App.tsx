@@ -1,6 +1,6 @@
 import React from 'react';
-import FlatlistAndCollapseScreen from './src/modules/flatlistAndCollapse/screens';
+import {AppNavigator} from './src/navigation';
 
 export default function App() {
-  return <FlatlistAndCollapseScreen />;
+  return <AppNavigator />;
 }
