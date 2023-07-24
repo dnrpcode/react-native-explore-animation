@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {StyleSheet, TouchableWithoutFeedback, ViewToken} from 'react-native';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
 import {Collapse} from '../../../components';
+import {Colors} from '../../../themes';
 
 interface ListItemProps {
   viewableItems: Animated.SharedValue<ViewToken[]>;
@@ -38,13 +39,13 @@ export const ListItem = React.memo((props: ListItemProps) => {
 const styles = StyleSheet.create({
   container: {
     width: '90%',
-    backgroundColor: '#415A77',
+    backgroundColor: Colors.primary,
     alignSelf: 'center',
     borderRadius: 15,
     marginTop: 20,
   },
   collapse: {
-    backgroundColor: '#415A77',
+    backgroundColor: Colors.primary,
     borderRadius: 15,
   },
 });

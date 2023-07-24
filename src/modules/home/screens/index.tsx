@@ -13,6 +13,10 @@ export default function Home(props: HomeProps) {
         onPress={() => navigation.navigate('FlatlistAndCollapse')}>
         <Text>Flatlist</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('ListSharedComponent')}>
+        <Text>Shared Component</Text>
+      </TouchableOpacity>
     </View>
   );
 }
