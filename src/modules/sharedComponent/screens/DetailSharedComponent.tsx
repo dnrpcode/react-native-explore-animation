@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {AppStackParamList} from '../../../navigation/AppStack';
@@ -11,10 +11,7 @@ type DetailSharedComponentType = NativeStackScreenProps<
   'DetailSharedComponent'
 >;
 
-export default function DetailSharedComponent(
-  props: DetailSharedComponentType,
-) {
-  const {navigation} = props;
+export default function DetailSharedComponent(_: DetailSharedComponentType) {
   return (
     <View style={styles.page}>
       <Animated.View
@@ -22,15 +19,11 @@ export default function DetailSharedComponent(
         sharedTransitionTag="sharedTag"
         sharedTransitionStyle={sharedElementTransition}
       />
-      <Button
-        title="Go back"
-        onPress={() => navigation.navigate('ListSharedComponent')}
-      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  page: {flex: 1, marginTop: 50, alignItems: 'center'},
+  page: {flex: 1, justifyContent: 'center', alignItems: 'center'},
   card: {width: 200, height: 100, backgroundColor: Colors.primary},
 });

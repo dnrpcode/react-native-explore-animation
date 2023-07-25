@@ -13,7 +13,7 @@ type ListSharedComponentType = NativeStackScreenProps<
 export default function ListSharedComponent(props: ListSharedComponentType) {
   const {navigation} = props;
   return (
-    <View style={styles.card}>
+    <View style={styles.page}>
       <TouchableOpacity
         onPress={() => navigation.navigate('DetailSharedComponent')}>
         <Animated.View style={styles.card} sharedTransitionTag="sharedTag" />
@@ -23,6 +23,11 @@ export default function ListSharedComponent(props: ListSharedComponentType) {
 }
 
 const styles = StyleSheet.create({
-  page: {flex: 1},
-  card: {width: 100, height: 100, backgroundColor: Colors.primary},
+  page: {flex: 1, alignItems: 'center'},
+  card: {
+    width: 100,
+    height: 100,
+    backgroundColor: Colors.primary,
+    borderRadius: 20,
+  },
 });
